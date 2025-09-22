@@ -1,0 +1,75 @@
+/*Style file created by Spencer
+=======================================================
+00: css variable
+01: color
+02: layout
+03: typography
+04: transition, animation, selector practice
+05: any exploratio
+=======================================================
+*/
+/** 00 css variable */
+:root{
+    --body-color: hsla(199, 45%, 74%, 0.87);
+    --page-color: hsla(19, 67%, 92%, 0.99);
+    --sidebar-color: hsla(59, 47%, 67%, 0.92);
+    --page-width: 30%;
+    --page-top: 85%;
+    --bottom-bar-height: 15vh;
+}
+/** 01 color */
+body{
+    background-color: var(--body-color);
+}
+#zen-intro{
+    background-color: var(--page-color);
+}
+.sidebar{
+    background-color: var(--sidebar-color);
+}
+/** 02 Layout */
+div.explanation, div.requirements, div.benefits, div.participation{
+    position: fixed;
+    width: var(--page-width);
+    top:var(--page-top);
+}
+div.explanation{
+    left: 1vh;
+    background-color: var(--page-color);
+}
+div.requirements{
+    left: 25vh;
+    background-color: var(--page-color);
+} 
+div.benefits{
+    left: 45vh;
+    background-color: var(--page-color);
+}
+div.participation{
+    left: 65vh;
+    background-color: var(--page-color);
+}
+
+.sidebar{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+}
+
+div.extra2{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: var(--bottom-bar-height)
+    background-color var(--page-color)
+}
+div.extra1{
+    position: fixed;
+    left: 20%;
+    width: 30%;
+    height: 80vh;
+    background-image: url(../img/zengarden.gif);
+}
