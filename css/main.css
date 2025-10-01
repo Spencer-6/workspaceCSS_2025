@@ -35,19 +35,19 @@ div.explanation, div.requirements, div.benefits, div.participation{
 }
 div.explanation{
     left: 1vh;
-    background-color: var(--page-color);
+    background-image: linear-gradient(0deg,hsla(19, 67%, 92%, 0.99), hsla(204, 66%, 92%, 0.99),hsla(199, 45%, 74%, 0.87),hsla(199, 45%, 52%, 0.87),rgba(34, 85, 109, 0.87),blue,navy);
 }
 div.requirements{
     left: 25vh;
-    background-color: var(--page-color);
+    background-image: linear-gradient(0deg,hsla(19, 67%, 92%, 0.99), hsla(204, 66%, 92%, 0.99),hsla(199, 45%, 74%, 0.87),hsla(199, 45%, 52%, 0.87),rgba(34, 85, 109, 0.87),blue,navy);
 } 
 div.benefits{
     left: 45vh;
-    background-color: var(--page-color);
+    background-image: linear-gradient(0deg,hsla(19, 67%, 92%, 0.99), hsla(204, 66%, 92%, 0.99),hsla(199, 45%, 74%, 0.87),hsla(199, 45%, 52%, 0.87),rgba(34, 85, 109, 0.87),blue,navy);
 }
 div.participation{
     left: 65vh;
-    background-color: var(--page-color);
+    background-image: linear-gradient(0deg,hsla(19, 67%, 92%, 0.99), hsla(204, 66%, 92%, 0.99),hsla(199, 45%, 74%, 0.87),hsla(199, 45%, 52%, 0.87),rgba(34, 85, 109, 0.87),blue,navy);
 }
 
 .sidebar{
@@ -58,18 +58,150 @@ div.participation{
     width: 20%;
 }
 
+
+/**div.extra1{
+    position: fixed;
+    left: 20%;
+    width: 30%;
+    height: 80vh;
+    background-image: url(../img/newspaper2.jpg);
+}*/
+/** Finish Intro layout*/
+section.intro{
+    position: fixed;
+    top: 10vh;
+    left: 20%;
+    width: 30%;
+    height: 80vh;
+    padding: 1%;
+    background-image: url(../img/newspaper3.jpg);
+}
+div.explanation h3{
+    margin-top: -7%;
+    width: 100px;
+    border: 3px dashed black;
+    background-color: burlywood;
+}
+div.requirements h3, div.benefits h3, div.participation h3{
+    margin-top: -5%;
+    width: 100px;
+    border: 3px dashed black;
+    background-color: burlywood;
+}
+
 div.extra2{
     position: fixed;
     left: 0;
     bottom: 0;
     right: 0;
-    height: var(--bottom-bar-height)
-    background-color var(--page-color)
+    height: var(--bottom-bar-height);
+    background-color: var(--page-color);
 }
-div.extra1{
-    position: fixed;
-    left: 20%;
-    width: 30%;
-    height: 80vh;
-    background-image: url(../img/zengarden.gif);
+/** 03 Typopgraphy */
+@font-face{
+    font-family: 'my font';
+    src: url(../fonts/chunkfive.eot)
 }
+header h1{
+    font-family: 'myfont', sans-serif;
+    font-weight: 100;
+    font-size: 1.25em;
+    letter-spacing: normal;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+header h2{
+    /** find a different font**/
+    font-family: 'Saira', cursive;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+#design-selection{
+    visibility: hidden;
+    
+    display: none;
+    
+}
+#design-archives{
+    display: none;
+}
+#zen-resources{
+    display: none;
+}
+
+/* please hide the archives and resources
+
+/* 04 transitions, animation, slector practice */
+
+a:hover{
+    font-size: 1.5em;
+}
+h3.hover{
+    color: tan;
+}
+div.explanation:hover{
+    top: 20vh;
+    height: 90vh;
+    transition: all 3s ease-in-out;
+}
+div.requirements:hover{
+    top: 20vh;
+    height: 90vh;
+    transition: all 3s ease-in-out;
+}
+div.benefits:hover{
+    top: 20vh;
+    height: 90vh;
+    transition: all 3s ease-in-out;
+}
+div.participation:hover{
+    top: 20vh;
+    height: 90vh;
+    transition: all 3s ease-in-out;
+}
+/*p::first-line{
+    font-size: 1.5em;
+    text-decoration-color: green;
+}
+p:nth-child(2n){
+    background-color: aquamarine;
+}*/
+/* try text shadow*/
+div{
+    box-shadow: 2px 2px 100px  hsla(199, 45%, 74%, 0.87);
+}
+
+div.explanation h3, div.requirements h3, div.benefits h3, div.participation h3{
+    border-radius: 20px;
+    border-top: solid hsla(78, 41%, 84%, 0.87);
+    padding-left: 10%;
+}
+
+/* transition transform*/
+section.intro h3 ~p{
+    text-transform: capitalize;
+    opacity: 1;
+    transition: all 3s ease-in-out;
+}
+
+section.intro h3:hover ~p{
+    opacity: 0;
+    transform: rotate(1440deg);
+}
+h2{
+    background-image: linear-gradient(0deg, hsla(19, 67%, 92%, 0.99),hsla(199, 45%, 74%, 0.87),hsla(199, 45%, 52%, 0.87),rgba(34, 85, 109, 0.87),blue,navy);
+    animation: 1s infinite running changeColor;
+}
+
+@keyframes changeColor{
+    from{background-image: linear-gradient(90deg, hsla(19, 67%, 92%, 0.99),hsla(199, 45%, 74%, 0.87),hsla(199, 45%, 52%, 0.87),rgba(34, 85, 109, 0.87),blue,navy)};
+    50%{background-image: linear-gradient(180deg, hsla(19, 67%, 92%, 0.99),hsla(199, 45%, 74%, 0.87),hsla(199, 45%, 52%, 0.87),rgba(34, 85, 109, 0.87),blue,navy)};
+    to{background-image: linear-gradient(270deg, hsla(19, 67%, 92%, 0.99),hsla(199, 45%, 74%, 0.87),hsla(199, 45%, 52%, 0.87),rgba(34, 85, 109, 0.87),blue,navy)};
+}
+
